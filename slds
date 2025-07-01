@@ -57,23 +57,91 @@ But since order matters in language…
 🧠 LLMs = Transformers + Tools
 Subhead: “From architecture to application.”
 
-💡 Key Talking Points:
-✅ LLMs use the Transformer as the core model, but that's not the full story.
+LLMs use the Transformer as the core model, but they are much more.
 
-🧰 They’re paired with tooling and systems for:
+🧰 They include:
 
-Prompt formatting
+Prompt formatting logic
 
-Context management
+Context management (tokens, memory)
 
-Memory / conversation history
+Safety & moderation layers
 
-Retrieval-Augmented Generation (RAG)
+External tool access (RAG, APIs)
 
-Safety and moderation layers
+UI integrations
 
-APIs and UI integration
+📦 Think of LLMs as a brain in a system — intelligent but also equipped with tools, memory, and a filter.
 
-🔍 Analogy:
-A Transformer is like a brilliant brain.
-An LLM is that brain placed inside a helpful assistant — with memory, access to tools, and guardrails.
+⚠️ Risks of LLMs in Financial Applications
+Subhead: “Smart doesn’t mean safe.”
+
+🔮 Hallucination
+LLMs can generate confident, fluent nonsense.
+
+Root cause: They predict words, not truth.
+
+Even with attention, they don’t “verify” — they complete patterns based on training data.
+
+🔒 Data Privacy & Leakage
+Centralized models may memorize sensitive data from training.
+
+Using external LLMs may expose PII and confidential info.
+
+Example:
+
+“Dear John, regarding your $42,700 transfer...”
+→ Even autocomplete can leak private data.
+
+🔐 Companies often block LLM use for sensitive projects, unless models are on-prem or use federated learning (training without moving data).
+
+🎲 Inconsistency
+LLMs are probabilistic: same input ≠ same output.
+
+Not great for auditing, compliance, or reproducibility.
+
+🎭 Prompt Injection
+Bad actors can trick LLMs with adversarial prompts, bypassing safeguards or leaking info.
+
+⚖️ Bias & Fairness
+LLMs may reflect societal biases in training data.
+
+Problematic for decisions involving lending, hiring, legal, etc.
+
+🛡️ Mitigating the Risks
+Subhead: “Guardrails for the Generative Age.”
+
+📚 Retrieval-Augmented Generation (RAG)
+Keep the model blind.
+
+Fetch relevant info from trusted sources at query time.
+
+Example: “How do I close a credit card?” → fetch your institution’s actual process.
+
+🧠 Fine-tuning
+Custom train on domain-specific data
+
+Improves reliability but expensive and slower to update
+
+🔍 Rule-based Filtering
+Post-process LLM output through filters
+
+Add regex, validation, or approval steps
+
+👀 Human-in-the-Loop
+High-stakes use cases → require reviewer approval
+
+E.g., legal response, investment advice, compliance writeups
+
+✅ Summary & Call to Action
+Subhead: “Use responsibly. Deploy defensibly.”
+
+LLMs are powerful, but they are not magic.
+
+Understand their structure, behavior, and limits
+
+Use architectural tools like RAG and privacy controls
+
+Stay ahead of compliance, hallucination, and fairness
+
+The best LLM deployment is both smart and safe.
