@@ -1,0 +1,31 @@
+📘 Naive Method – Dictionary Index
+
+"Cat" → 23, "Car" → 24
+
+❌ Close IDs, but no relation in meaning
+
+📊 Frequency-Based Encoding – Co-occurrence Across Documents
+
+We build a matrix:
+
+Rows = words (e.g., "oil", "economy", "banana")
+
+Columns = documents
+
+Cells = how often the word appears in each doc
+
+Use cosine similarity between word vectors
+
+"Oil" and "Economy" → often appear in same documents → high similarity
+
+❗ But: concepts are still not semantically similar
+
+🧠 Word Embeddings – Word2Vec / GloVe
+
+Learn meaning from surrounding words, not just document co-occurrence
+
+"Loan" is close to "Credit", far from "Banana"
+
+✅ Captures semantic relationships
+
+✅ Allows analogies: King - Man + Woman ≈ Queen
