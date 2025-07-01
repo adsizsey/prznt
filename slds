@@ -1,15 +1,26 @@
 🔁 Why RNNs? Why Not Regular Neural Networks?
 Subhead: “When word order matters, memory helps.”
 
-This slide sets up the motivation for Recurrent Neural Networks by contrasting them with fully connected (feedforward) networks.
+🧱 The Problem:
 
-✅ Key Points to Include:
-🧱 Standard neural networks treat all inputs as fixed-size — no sense of sequence.
-
-🧠 But in language, order matters:
+Feedforward neural networks treat input as unordered — not ideal for language, where order = meaning.
 
 “The cat chased the dog” ≠ “The dog chased the cat”
 
-🔁 RNNs introduce memory: each word's representation depends on previous words.
+🔁 Enter RNNs:
 
-📉 Problem: classic RNNs struggle with long-term dependencies due to vanishing gradients.
+RNNs pass information forward through time steps, building memory.
+
+Each word’s meaning is shaped by what came before it.
+
+⚠️ But RNNs Struggle With Long Sentences:
+
+Gradients vanish over time → early words get forgotten.
+
+Long-range dependencies become hard to learn.
+
+✨ That’s where Attention comes in:
+
+Instead of remembering everything step by step...
+
+🔦 Attention lets the model directly focus on relevant words, no matter how far back they are.
