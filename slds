@@ -24,3 +24,32 @@ Long-range dependencies become hard to learn.
 Instead of remembering everything step by step...
 
 🔦 Attention lets the model directly focus on relevant words, no matter how far back they are.
+
+
+
+
+
+⚡ The Transformer Revolution
+Subhead: “No recurrence. No forgetting. Just attention.”
+
+🧱 The Problem with RNNs:
+
+Process words one at a time → slow and hard to scale
+
+Forget early words in long sequences
+
+✨ Enter Transformers:
+
+Self-attention: each word attends to all other words, regardless of position
+
+No recurrence = massive speedups via parallelism
+
+Captures long-range dependencies with ease
+
+But since order matters in language…
+→ 🔢 Transformers inject positional information directly into word embeddings
+
+🧠 Example:
+
+“The loan was approved because the customer had good credit.”
+→ “Approved” directly attends to “good credit,” even if they’re far apart
