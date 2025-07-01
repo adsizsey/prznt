@@ -53,3 +53,27 @@ But since order matters in language…
 
 “The loan was approved because the customer had good credit.”
 → “Approved” directly attends to “good credit,” even if they’re far apart
+
+🧠 LLMs = Transformers + Tools
+Subhead: “From architecture to application.”
+
+💡 Key Talking Points:
+✅ LLMs use the Transformer as the core model, but that's not the full story.
+
+🧰 They’re paired with tooling and systems for:
+
+Prompt formatting
+
+Context management
+
+Memory / conversation history
+
+Retrieval-Augmented Generation (RAG)
+
+Safety and moderation layers
+
+APIs and UI integration
+
+🔍 Analogy:
+A Transformer is like a brilliant brain.
+An LLM is that brain placed inside a helpful assistant — with memory, access to tools, and guardrails.
