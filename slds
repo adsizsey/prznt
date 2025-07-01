@@ -1,31 +1,15 @@
-📘 Naive Method – Dictionary Index
+🔁 Why RNNs? Why Not Regular Neural Networks?
+Subhead: “When word order matters, memory helps.”
 
-"Cat" → 23, "Car" → 24
+This slide sets up the motivation for Recurrent Neural Networks by contrasting them with fully connected (feedforward) networks.
 
-❌ Close IDs, but no relation in meaning
+✅ Key Points to Include:
+🧱 Standard neural networks treat all inputs as fixed-size — no sense of sequence.
 
-📊 Frequency-Based Encoding – Co-occurrence Across Documents
+🧠 But in language, order matters:
 
-We build a matrix:
+“The cat chased the dog” ≠ “The dog chased the cat”
 
-Rows = words (e.g., "oil", "economy", "banana")
+🔁 RNNs introduce memory: each word's representation depends on previous words.
 
-Columns = documents
-
-Cells = how often the word appears in each doc
-
-Use cosine similarity between word vectors
-
-"Oil" and "Economy" → often appear in same documents → high similarity
-
-❗ But: concepts are still not semantically similar
-
-🧠 Word Embeddings – Word2Vec / GloVe
-
-Learn meaning from surrounding words, not just document co-occurrence
-
-"Loan" is close to "Credit", far from "Banana"
-
-✅ Captures semantic relationships
-
-✅ Allows analogies: King - Man + Woman ≈ Queen
+📉 Problem: classic RNNs struggle with long-term dependencies due to vanishing gradients.
